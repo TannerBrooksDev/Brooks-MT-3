@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Music Dashboard</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<aside aria-label="Sidebar">
+			<a href="#home">Soundwave</a>
+			<nav aria-label="Main navigation">
+				<ul>
+					<li><a href="#home" aria-current="page">Home</a></li>
+					<li><a href="#discover">Discover</a></li>
+					<li><a href="#library">Your Library</a></li>
+					<li><a href="#playlists">Playlists</a></li>
+				</ul>
+			</nav>
+		</aside>
+
+		<main id="home">
+			<header>
+				<form role="search" action="#discover" method="get">
+					<label for="music-search">Search music</label>
+					<input id="music-search" name="q" type="search" placeholder="Search songs, artists, or albums">
+					<button type="submit">Search</button>
+				</form>
+			</header>
+
+			<section id="discover" aria-labelledby="songs-heading">
+				<h1 id="songs-heading">Songs for you</h1>
+				<div class="song-grid">
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/golden-hour/320/320" alt="Album artwork for Golden Hour">
+						<h2>Golden Hour</h2>
+						<p>JVKE</p>
+						<button type="button" aria-label="Play Golden Hour by JVKE">Play</button>
+					</article>
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/levitating/320/320" alt="Album artwork for Levitating">
+						<h2>Levitating</h2>
+						<p>Dua Lipa</p>
+						<button type="button" aria-label="Play Levitating by Dua Lipa">Play</button>
+					</article>
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/blinding-lights/320/320" alt="Album artwork for Blinding Lights">
+						<h2>Blinding Lights</h2>
+						<p>The Weeknd</p>
+						<button type="button" aria-label="Play Blinding Lights by The Weeknd">Play</button>
+					</article>
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/as-it-was/320/320" alt="Album artwork for As It Was">
+						<h2>As It Was</h2>
+						<p>Harry Styles</p>
+						<button type="button" aria-label="Play As It Was by Harry Styles">Play</button>
+					</article>
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/bad-guy/320/320" alt="Album artwork for bad guy">
+						<h2>bad guy</h2>
+						<p>Billie Eilish</p>
+						<button type="button" aria-label="Play bad guy by Billie Eilish">Play</button>
+					</article>
+					<article class="song-card">
+						<img src="https://picsum.photos/seed/sunflower/320/320" alt="Album artwork for Sunflower">
+						<h2>Sunflower</h2>
+						<p>Post Malone, Swae Lee</p>
+						<button type="button" aria-label="Play Sunflower by Post Malone and Swae Lee">Play</button>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<footer aria-label="Now Playing">
+			<section aria-labelledby="now-playing-heading">
+				<h2 id="now-playing-heading">Now Playing</h2>
+				<img src="https://picsum.photos/seed/golden-hour/96/96" alt="Album artwork for Golden Hour">
+				<p><strong>Golden Hour</strong><br>JVKE</p>
+			</section>
+
+			<section aria-label="Playback controls">
+				<button class="transport-button" type="button" aria-label="Previous track">⏮️</button>
+				<button class="transport-button play-toggle" type="button" aria-label="Play" aria-pressed="false">▶️</button>
+				<button class="transport-button" type="button" aria-label="Next track">⏭️</button>
+				<label for="track-progress">Track progress</label>
+				<input id="track-progress" type="range" min="0" max="100" value="35">
+			</section>
+
+			<section aria-label="Volume control">
+				<label for="volume">Volume</label>
+				<input id="volume" type="range" min="0" max="100" value="70">
+			</section>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
